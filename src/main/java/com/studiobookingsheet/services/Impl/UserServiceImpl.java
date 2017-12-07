@@ -44,5 +44,13 @@ public class UserServiceImpl implements UserService {
     public User findByEmailAndPassword(String email, String password) {
         return userRepository.findByEmailIgnoreCaseAndPassword(email, password);
     }
+    @Override
+    public User findByEmailIgnoreCase(String email) {
+        return userRepository.findByEmailIgnoreCase(email);
+    }
+    @Override
+    public User findByPassword(String password) {
+        return userRepository.findByPassword(password);
+    }
 
 }

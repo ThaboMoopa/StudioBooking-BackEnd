@@ -30,9 +30,9 @@ public class ProgramSlotLoad {
 
     public void loadPrograms() {
 
-        programSlot = ProgramSlotFactory.getProgramSlot("Well_Informed", "12h30" );
+        programSlot = ProgramSlotFactory.getProgramSlot("well_informed", "12h30" );
         programSlotService.create(programSlot);
-        programSlot = ProgramSlotFactory.getProgramSlot("Bible_Toolbox", "14h30" );
+        programSlot = ProgramSlotFactory.getProgramSlot("bible_toolbox", "14h30" );
         programSlotService.create(programSlot);
     }
 

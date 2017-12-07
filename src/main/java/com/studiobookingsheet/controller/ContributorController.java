@@ -30,7 +30,7 @@ public class ContributorController {
     OrganisationServiceImpl organisationService;
 
     @CrossOrigin
-    @PostMapping(path = "/{organisationId}/addContributor")
+    @GetMapping(path = "/{organisationId}/addContributor")
     public @ResponseBody Contributor create(@PathVariable long organisationId,
                                             @RequestParam String name, @RequestParam String surname,
                                             @RequestParam String email,

@@ -77,6 +77,13 @@ public class ProgramSlotController {
         return programSlotService.findByName(search);
 
     }
+    @CrossOrigin
+    @GetMapping(path = "/findByTime")
+    public @ResponseBody  ProgramSlot findByTime(@RequestParam String time)
+    {
+        return programSlotService.findByTime(time);
+
+    }
 //    @CrossOrigin
 //    @GetMapping(path = "/Search")
 //    public @ResponseBody Iterable<ProgramSlot> findByName(@RequestParam String search)

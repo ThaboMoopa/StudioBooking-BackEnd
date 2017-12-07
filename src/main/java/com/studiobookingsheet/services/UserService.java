@@ -12,5 +12,7 @@ public interface UserService {
     void delete(long id);
     Iterable<User> findAll();
     User findByEmailAndPassword(String email, String password);
+    User findByEmailIgnoreCase(String email);
+    User findByPassword(String password);
 
 }

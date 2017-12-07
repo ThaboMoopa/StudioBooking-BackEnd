@@ -43,4 +43,16 @@ public class UserController {
     {
         return userService.findByEmailAndPassword(email, password);
     }
+    @CrossOrigin
+    @GetMapping(path="/findByEmail")
+    public @ResponseBody User findByEmailIgnoreCase(@RequestParam String email)
+    {
+        return userService.findByEmailIgnoreCase(email);
+    }
+    @CrossOrigin
+    @GetMapping(path="/findByPassword")
+    public @ResponseBody User findByPassword(@RequestParam String password)
+    {
+        return userService.findByPassword(password);
+    }
 }

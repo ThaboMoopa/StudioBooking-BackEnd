@@ -13,4 +13,5 @@ public interface ProgramSlotService {
     Iterable<ProgramSlot> findByNameContaining(String search);
     Iterable<ProgramSlot> findAll();
     ProgramSlot findByName(String name);
+    ProgramSlot findByTime(String time);
 }
