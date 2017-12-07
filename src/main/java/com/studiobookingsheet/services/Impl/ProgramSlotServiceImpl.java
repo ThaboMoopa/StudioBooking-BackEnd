@@ -50,8 +50,9 @@ public class ProgramSlotServiceImpl implements ProgramSlotService{
         return programSlotRepository.findByNameIgnoreCase(name);
     }
 
+
     @Override
-    public ProgramSlot findByTime(String time) {
-        return programSlotRepository.findByTimeIgnoreCase(time);
+    public Iterable<ProgramSlot> findByTimeContaining(String time) {
+        return programSlotRepository.findByTimeContainingIgnoreCase(time);
     }
 }

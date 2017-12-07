@@ -9,7 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface ProgramSlotRepository extends CrudRepository<ProgramSlot, Long>{
     Iterable<ProgramSlot> findByNameContainingIgnoreCase(String search);
     ProgramSlot findByNameIgnoreCase(String name);
-    ProgramSlot findByTimeIgnoreCase(String time);
+    Iterable<ProgramSlot> findByTimeContainingIgnoreCase(String time);
    // Iterable<ProgramSlot> findByNameContainingIgnoreCase(String name);
 
 
