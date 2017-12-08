@@ -60,7 +60,7 @@ public class ContributorController {
     }
 
     @CrossOrigin
-    @PutMapping(path = "/{organisationId}/updateContributor")
+    @GetMapping(path = "/{organisationId}/updateContributor")
     public @ResponseBody String update(@PathVariable long organisationId, @RequestParam long id, @RequestParam String name,
                                        @RequestParam String surname, @RequestParam String email,
                                        @RequestParam String position, @RequestParam String contact,
