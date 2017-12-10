@@ -37,7 +37,7 @@ public class ProgramSlotServiceImpl implements ProgramSlotService{
 
     @Override
     public Iterable<ProgramSlot> findByNameContaining(String search) {
-        return programSlotRepository.findByNameContainingIgnoreCase(search);
+        return programSlotRepository.findByNameContainingIgnoreCaseOrderByNameAsc(search);
     }
 
     @Override

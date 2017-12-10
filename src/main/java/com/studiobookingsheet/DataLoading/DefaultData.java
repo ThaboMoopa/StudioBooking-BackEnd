@@ -82,6 +82,20 @@ public class DefaultData {
         contributor = ContributorFactory.getContributor(stringValues, organisation);
         organisation = organisationService.read(1);
         contributorService.create(contributor);
+
+        Map<String, String> stringValues2 = new HashMap<String, String>();
+        stringValues2.put("name", "John");
+        stringValues2.put("surname", "Moopa");
+        stringValues2.put("email", "john.moopa@gmail.com");
+        stringValues2.put("position", "Technical");
+        stringValues2.put("contact", "0840000000");
+        stringValues2.put("additionalContact", "0840000000");
+
+
+
+        contributor = ContributorFactory.getContributor(stringValues2, organisation);
+        organisation = organisationService.read(1);
+        contributorService.create(contributor);
     }
 
     private void loadTimes()

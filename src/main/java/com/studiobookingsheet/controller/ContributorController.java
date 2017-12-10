@@ -135,5 +135,11 @@ public class ContributorController {
         contributorService.deleteById(id);
         //return contributor.toString();
     }
+    @CrossOrigin
+    @GetMapping(path = "/findByNameOrderName")
+    public @ResponseBody Iterable<Contributor> findByNameOrderByName(@RequestParam String name)
+    {
+        return contributorService.findByNameOrderByName(name);
+    }
 
 }
