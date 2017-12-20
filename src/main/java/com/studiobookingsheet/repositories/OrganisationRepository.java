@@ -9,4 +9,5 @@ import org.springframework.data.repository.CrudRepository;
 public interface OrganisationRepository extends CrudRepository<Organisation, Long> {
 
     Organisation findByOrganisationName(String name);
+    Iterable<Organisation> findByNameContainingIgnoreCase(String name);
 }

@@ -87,5 +87,12 @@ public class OrganisationController {
 
         return organisation.getOrganisationName();
     }
+    @CrossOrigin
+    @GetMapping(path = "/findByContainingName")
+    public @ResponseBody Organisation findByContainingName(@RequestParam String name)
+    {
+
+        return organisation.getOrganisationName();
+    }
 
 }

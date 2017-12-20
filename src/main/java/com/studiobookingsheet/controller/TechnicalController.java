@@ -21,7 +21,7 @@ public class TechnicalController {
 
 
     @CrossOrigin
-    @PostMapping(path = "/addTechnical")
+    @GetMapping(path = "/addTechnical")
     public @ResponseBody Technical create(@RequestParam String name)
     {
         technical = TechnicalFactory.getTechnical(name);
@@ -36,7 +36,7 @@ public class TechnicalController {
     }
 
     @CrossOrigin
-    @PutMapping(path = "/updateTechnical")
+    @GetMapping(path = "/updateTechnical")
     public @ResponseBody Technical update(@RequestParam long id, String name)
     {
         Technical updateTechnical = new Technical.Builder()

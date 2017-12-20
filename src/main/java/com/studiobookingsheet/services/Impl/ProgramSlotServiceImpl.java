@@ -47,6 +47,11 @@ public class ProgramSlotServiceImpl implements ProgramSlotService{
 
     @Override
     public ProgramSlot findByName(String name) {
-        return programSlotRepository.findByName(name);
+        return programSlotRepository.findByNameIgnoreCase(name);
+    }
+
+    @Override
+    public ProgramSlot findByTime(String time) {
+        return programSlotRepository.findByTimeIgnoreCase(time);
     }
 }

@@ -21,7 +21,7 @@ public class ProgramSlotController {
     private ProgramSlotServiceImpl programSlotService;
 
     @CrossOrigin
-    @PostMapping(path = "/addProgramSlot")
+    @GetMapping(path = "/addProgramSlot")
     public @ResponseBody ProgramSlot create(@RequestParam String name, @RequestParam String time)
     {
         programSlot = ProgramSlotFactory.getProgramSlot(name, time);
@@ -37,7 +37,7 @@ public class ProgramSlotController {
     }
 
     @CrossOrigin
-    @PutMapping(path = "/updateProgramSlot")
+    @GetMapping(path = "/updateProgramSlot")
     public @ResponseBody ProgramSlot update(@RequestParam long id, @RequestParam String name, @RequestParam String time)
     {
         ProgramSlot programSlot = new ProgramSlot.Builder()
@@ -75,6 +75,13 @@ public class ProgramSlotController {
     public @ResponseBody  ProgramSlot findByName(@RequestParam String search)
     {
         return programSlotService.findByName(search);
+
+    }
+    @CrossOrigin
+    @GetMapping(path = "/findByTime")
+    public @ResponseBody  ProgramSlot findByTime(@RequestParam String time)
+    {
+        return programSlotService.findByTime(time);
 
     }
 //    @CrossOrigin

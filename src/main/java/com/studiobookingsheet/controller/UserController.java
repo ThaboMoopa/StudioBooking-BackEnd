@@ -22,7 +22,7 @@ public class UserController {
     UserServiceImpl userService;
 
     @CrossOrigin
-    @PostMapping(path = "/addUser")
+    @GetMapping(path = "/addUser")
     public @ResponseBody
     User create(@RequestParam String email,@RequestParam String password,@RequestParam String name)
     {
@@ -42,5 +42,17 @@ public class UserController {
     public @ResponseBody User findByEmailAndPassword(@RequestParam String email, @RequestParam String password)
     {
         return userService.findByEmailAndPassword(email, password);
+    }
+    @CrossOrigin
+    @GetMapping(path="/findByEmail")
+    public @ResponseBody User findByEmailIgnoreCase(@RequestParam String email)
+    {
+        return userService.findByEmailIgnoreCase(email);
+    }
+    @CrossOrigin
+    @GetMapping(path="/findByPassword")
+    public @ResponseBody User findByPassword(@RequestParam String password)
+    {
+        return userService.findByPassword(password);
     }
 }

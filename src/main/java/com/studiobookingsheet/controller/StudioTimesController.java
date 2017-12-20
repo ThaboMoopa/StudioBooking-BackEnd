@@ -21,7 +21,7 @@ public class StudioTimesController {
     private StudioTimesServiceImpl studioTimesService;
 
     @CrossOrigin
-    @PostMapping(path = "/addStudioTimes")
+    @GetMapping(path = "/addStudioTimes")
     public @ResponseBody
     StudioTimes create(@RequestParam String times)
     {

@@ -48,7 +48,7 @@ public class loadBooking {
     {
         Map<String, String> stringValues = new HashMap<String,String>();
         stringValues.put("additionalInfo", "Additional information");
-        stringValues.put("date", "30_November_17");
+        stringValues.put("date", "11_December_17");
         stringValues.put("technical", "Thabo");
         stringValues.put("time", "08h00");
         stringValues.put("user", "Brad");
@@ -56,7 +56,7 @@ public class loadBooking {
 
         Map<String, String> stringValues2 = new HashMap<String,String>();
         stringValues2.put("additionalInfo", "Additional information");
-        stringValues2.put("date", "30_November_17");
+        stringValues2.put("date", "11_December_17");
         stringValues2.put("technical", "Thabo");
         stringValues2.put("time", "08h30");
         stringValues2.put("user", "Brad");
@@ -64,7 +64,7 @@ public class loadBooking {
 
         Map<String, String> stringValues3 = new HashMap<String,String>();
         stringValues3.put("additionalInfo", "Additional information");
-        stringValues3.put("date", "30_November_17");
+        stringValues3.put("date", "11_December_17");
         stringValues3.put("technical", "Thabo");
         stringValues3.put("time", "09h30");
         stringValues3.put("user", "Brad");
