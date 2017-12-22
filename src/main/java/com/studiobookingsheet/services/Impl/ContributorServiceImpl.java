@@ -55,6 +55,12 @@ public class ContributorServiceImpl implements ContributorService {
     public void deleteById(long id) {
         contributorRepository.deleteById(id);
     }
+
+    @Override
+    public Iterable<Contributor> findAllOrderByNameAsc() {
+        return contributorRepository.findAllByOrderByNameAsc();
+    }
+
     //    @Override
 //    public Iterable<Contributor> findByNameOrSurname(String search) {
 //        return contributorRepository.findByNameOrSurnameContaining(search);

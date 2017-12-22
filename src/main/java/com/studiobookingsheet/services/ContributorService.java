@@ -14,4 +14,5 @@ public interface ContributorService {
     Iterable<Contributor> findAll();
     Iterable<Contributor> findByName(String name);
     void deleteById(long id);
+    Iterable<Contributor> findAllOrderByNameAsc();
 }

@@ -44,4 +44,9 @@ public class OrganisationServiceImpl implements OrganisationService{
     public Organisation findByOrganisationName(String name) {
         return organisationRepository.findByOrganisationName(name);
     }
+
+    @Override
+    public Iterable<Organisation> findByOrganisationNameContainingIgnoreCase(String name) {
+        return organisationRepository.findByOrganisationNameContainingIgnoreCase(name);
+    }
 }

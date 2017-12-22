@@ -14,7 +14,7 @@ import java.util.Map;
  */
 @Component
 public class OrganisationLoad {
-    
+
     private Organisation organisation;
 
     private OrganisationServiceImpl organisationService;
@@ -35,7 +35,7 @@ public class OrganisationLoad {
         stringValues.put("webAddress", "www.capitec.co.za");
 
         Map<String, String> stringValues2 = new HashMap<String, String>();
-        stringValues2.put("organisationName", "Capitec");
+        stringValues2.put("organisationName", "Liberty");
         stringValues2.put("contactDetails", "0123341200");
         stringValues2.put("contactPerson", "0849262255");
         stringValues2.put("webAddress", "www.capitec.co.za");

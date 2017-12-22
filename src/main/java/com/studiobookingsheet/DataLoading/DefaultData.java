@@ -61,8 +61,8 @@ public class DefaultData {
     }
 
     private void LoadUsers() {
-        user = UserFactory.getUser("thabo@capepulpit.co.za", "Moopa!@3", "Thabo");
-        userService.create(user);
+//        user = UserFactory.getUser("thabo@capepulpit.co.za", "Moopa!@3", "Thabo");
+//        userService.create(user);
         user = UserFactory.getUser("admin@capepulpit.co.za", "admin2424", "admin");
         userService.create(user);
 

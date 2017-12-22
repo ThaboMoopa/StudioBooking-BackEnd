@@ -135,5 +135,13 @@ public class ContributorController {
         contributorService.deleteById(id);
         //return contributor.toString();
     }
+    @CrossOrigin
+    @GetMapping(path = "/findAllOrderByNameAsc")
+    public @ResponseBody Iterable<Contributor> findAllOrderById()
+    {
+       return contributorService.findAllOrderByIdAsc();
+        //return contributor.toString();
+    }
+
 
 }
