@@ -139,9 +139,15 @@ public class ContributorController {
     @GetMapping(path = "/findAllOrderByNameAsc")
     public @ResponseBody Iterable<Contributor> findAllOrderById()
     {
-       return contributorService.findAllOrderByIdAsc();
+        return contributorService.findAllOrderByNameAsc();
         //return contributor.toString();
     }
-
+//    @CrossOrigin
+//    @GetMapping(path = "/findAllOrderByNameAsc")
+//    public @ResponseBody Iterable<Contributor> findByNameIgnoreCase(String name)
+//    {
+//        return contributorService.findAllOrderByNameAsc();
+//        //return contributor.toString();
+//    }
 
 }

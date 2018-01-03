@@ -58,7 +58,7 @@ public class ContributorServiceImpl implements ContributorService {
 
     @Override
     public Iterable<Contributor> findAllOrderByNameAsc() {
-        return contributorRepository.findAllByOrderByNameAsc();
+        return contributorRepository.findAllByOrderByNameDesc();
     }
 
     //    @Override
