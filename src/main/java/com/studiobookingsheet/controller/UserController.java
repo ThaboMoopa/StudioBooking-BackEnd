@@ -27,7 +27,7 @@ public class UserController {
     User create(@RequestParam String email,@RequestParam String password,@RequestParam String name)
     {
         user = UserFactory.getUser(email, password, name);
-        return user;
+        return userService.create(user);
     }
 
     @CrossOrigin

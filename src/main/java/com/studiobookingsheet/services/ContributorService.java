@@ -13,6 +13,7 @@ public interface ContributorService {
     Contributor findByEmail(String email);
     Iterable<Contributor> findAll();
     Iterable<Contributor> findByName(String name);
+    Iterable<Contributor> findByNameOrderByName(String name);
     void deleteById(long id);
     Iterable<Contributor> findAllOrderByNameAsc();
 }

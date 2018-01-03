@@ -12,6 +12,7 @@ public interface ContributorRepository extends CrudRepository<Contributor, Long>
     Contributor findByEmail(String email);
     Iterable<Contributor> findAllByOrderByNameDesc();
     Iterable<Contributor> findByNameContainingIgnoreCase(String name);
+    Iterable<Contributor> findByNameContainingIgnoreCaseOrderByName(String name);
     Contributor deleteById(long id); 
 
     //Contributor findByFirstnameStartingWith(String search)
